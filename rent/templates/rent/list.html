@@ -1,0 +1,7 @@
+{% extends "../basic.html" %}
+{% block content %}
+	{% for instance in object_list %}
+		<a href="/rent/buildings/{{ instance.id }}">  {{ instance.address }}</a>
+		<br />
+	{% endfor %}	
+{% endblock %}
