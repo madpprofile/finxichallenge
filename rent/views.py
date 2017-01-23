@@ -9,7 +9,7 @@ def register(request):
 		if form.is_valid():
 			instance = form.save(commit=False)
 			instance.save()			
-			return render(request, 'rent/detail.html', {'instance': instance})
+			return render(request, 'rent/detail.html', {'object': instance})
 	else:
 		form = RegisterForm()
 
