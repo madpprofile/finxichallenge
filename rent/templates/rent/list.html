@@ -1,5 +1,15 @@
 {% extends "../basic.html" %}
 {% block content %}
+		<!--
+		<div class="col-lg-12 search-div">
+			<form method="get" class="form-inline">
+				<div class="form-control">
+					<input type="text" placeholder="Search" />
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
+		</div>
+		-->
 	{% for instance in object_list %}
 		<a href="/rent/buildings/{{ instance.id }}">
 			<div class="col-lg-6 panel panel-primary list-item">

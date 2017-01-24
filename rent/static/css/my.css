@@ -9,3 +9,12 @@
 	display: block;	
 	object-fit: cover;
 }
+
+.detailed-img{
+	display: block;
+	margin: auto;
+}
+
+.search-div{
+	height: 100px;
+}
