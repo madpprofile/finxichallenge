@@ -5,7 +5,19 @@
 		<h1>{{ object.address }}</h1>
 	</div>
 	<div class="panel-body detailed-img">
-		<img src="{{ object.picture.url }}" class="img-responsive" />
+		<div>
+			<img src="{{ object.picture.url }}" class="img-responsive" />
+		</div>
+		<div="panel-footer"> <br/>
+			<table class="building-info">
+				<tr><td>Number:</td><td> {{ object.number }}</td></tr>
+				<tr><td>Apartment:</td><td> {{ object.Appartment }}</td></tr>
+				<tr><td>Street:</td><td> {{ object.street }}</td></tr>
+				<tr><td>City:</td><td> {{ object.city }}</td></tr>
+				<tr><td>State:</td><td> {{ object.state }}</td></tr>
+				<tr><td>Country:</td><td> {{ object.country }}</td></tr>
+			</table>
+		</div>
 		
 	</div>
 </div>

@@ -8,7 +8,8 @@ urlpatterns = [
 	url(r'^buildings/(?P<pk>\d+)$', DetailView.as_view(
                             model = Building,
                             template_name="rent/detail.html")),
+	url(r'^search/', views.search),
 	url(r'^$', ListView.as_view(
 							queryset=Building.objects.all(),
-							template_name="rent/list.html")),
+							template_name="rent/list.html"))
 ]

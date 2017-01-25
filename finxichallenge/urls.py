@@ -22,8 +22,7 @@ from . import views, settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^$', views.index),
-    url(r'^rent/', include('rent.urls'))	
+	url(r'^', include('rent.urls')),
 ]
 
 if settings.DEBUG:

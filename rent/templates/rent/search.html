@@ -1,0 +1,44 @@
+{% extends "../basic.html" %}
+{% block content %}
+	{% if option == 0 %}
+		<p>No results found</p>
+	{% else %}
+		<table>
+			<tr>
+				<td>
+					<div class="panel-primary search-panel">
+						<div class="form-group panel-heading">
+							<h2>Search result:</h2>
+						</div>
+						<a href="/buildings/{% with list|first as first_pan %}{{ first_pan.id }}{% endwith %}">
+						<div class="panel-body>
+		{% for instance in list %}
+			<a href="/buildings/{{ instance.id }}">
+				<div class="col-lg-6 panel panel-primary list-item">
+					<h3 class="panel-heading">{{ instance.address }}</h3>
+					<div class="panel-body">
+						<img src="{{ instance.picture.url }}" class="img-thumbnail" />
+					</div>
+				</div>
+			</a>
+			{% if forloop.counter == 1 and option == 1 %}
+					</div>
+					</a>
+				</div>
+				</td></tr>
+				<tr><td>
+				<br class="clear"/>
+				<div class="panel-primary nearby-panel">
+					<div class="form-group panel-heading">
+						<h2>Nearby places:</h2>
+					</div>
+					<div class="panel-body">
+			{% endif %}
+		{% endfor %}
+		{% if option == 1 %}
+				</div>
+			</div>
+		{% endif %}
+		</td></tr></table>
+	{% endif %}
+{% endblock %}
