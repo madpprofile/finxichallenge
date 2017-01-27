@@ -10,7 +10,7 @@ def register(request):
 		if form.is_valid():
 			instance = form.save(commit=False)
 			print(instance.address)
-			g = geocoder.google(instance.address)
+			g = geocoder.google(instance.address())
 			instance.latitude, instance.longitude = g.latlng
 			print(instance.latitude)
 			print(instance.longitude)
